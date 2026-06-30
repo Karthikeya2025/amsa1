@@ -824,3 +824,25 @@ h3 {
     width: 170px;
   }
 }
+@media (max-width: 700px) {
+  .mini-map {
+    min-height: 220px;
+  }
+
+  .mini-map iframe {
+    min-height: 220px;
+  }
+}
+@media (max-width: 700px) {
+  .footer-inner {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: 12px;
+    padding: 20px 0;
+  }
+
+  .footer-socials {
+    justify-content: center;
+  }
+}
