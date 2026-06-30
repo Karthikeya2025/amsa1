@@ -436,9 +436,22 @@ h3 {
 }
 
 .icon-btn {
-  width: 42px;
+   width: 42px;
   height: 42px;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.9);
+  color: #183982;
   font-size: 1.25rem;
+  font-weight: 900;
+  cursor: pointer;
+  transition: background 180ms ease, color 180ms ease, box-shadow 180ms ease;
+}
+.icon-btn:hover,
+.icon-btn:active {
+  background: #183982;
+  color: #ffffff;
+  box-shadow: 0 0 0 5px rgba(24, 57, 130, 0.22);
 }
 
 .filter-row {
@@ -610,20 +623,17 @@ h3 {
 }
 
 .mini-map {
-  display: grid;
-  min-height: 240px;
-  place-items: center;
-  border: 1px solid var(--line);
-  border-radius: 8px;
-  background:
-    linear-gradient(90deg, rgba(24, 57, 130, 0.08) 1px, transparent 1px),
-    linear-gradient(rgba(24, 57, 130, 0.08) 1px, transparent 1px),
-    #fff;
-  background-size: 28px 28px;
-  color: var(--brand);
-  font-weight: 900;
+  min-height: 280px;
+  overflow: hidden;
+  padding: 0;
 }
 
+.mini-map iframe {
+  width: 100%;
+  min-height: 280px;
+  display: block;
+  border: 0;
+}
 .site-footer {
   background: var(--brand-dark);
   color: #dfe6ff;
@@ -642,12 +652,28 @@ h3 {
   margin: 0;
 }
 
-.footer-links {
+.footer-socials {
   display: flex;
-  flex-wrap: wrap;
-  gap: 13px;
-  color: #fff;
-  font-weight: 700;
+  align-items: center;
+  gap: 10px;
+}
+
+.social-icon {
+  display: grid;
+  width: 42px;
+  height: 42px;
+  place-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.65);
+  border-radius: 50%;
+  transition: background 180ms ease, transform 180ms ease, border-color 180ms ease;
+}
+
+.social-icon img {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+  mix-blend-mode: screen;
+  
 }
 
 .lightbox {
